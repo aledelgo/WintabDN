@@ -519,6 +519,14 @@ namespace WintabDN
                 MessageBox.Show("FAILED GetDataPacketExt: " + ex.ToString());
             }
 
+            /**
+             * PERFORMANCE FIX: without this line, the memory consume of .NET apps increase
+             * exponentially when the PEN is used for long time (or worse when the pen is leaved alone on the tablet screen)
+             * causing the app to crash now or later...
+             * Author: Alessandro del Gobbo   (alessandro@delgobbo.com)
+             */
+            CMemUtils.FreeUnmanagedBuf(buf);
+
             return packets[0];
         }
 
@@ -566,6 +574,14 @@ namespace WintabDN
                 packet.pkContext = 0;
 
             }
+
+            /**
+             * PERFORMANCE FIX: without this line, the memory consume of .NET apps increase
+             * exponentially when the PEN is used for long time (or worse when the pen is leaved alone on the tablet screen)
+             * causing the app to crash now or later...
+             * Author: Alessandro del Gobbo   (alessandro@delgobbo.com)
+             */
+            CMemUtils.FreeUnmanagedBuf(buf);
 
             return packet;
         }

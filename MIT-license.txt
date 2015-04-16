@@ -15,3 +15,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+// Copyright (c) 2015, Alessandro del Gobbo (alessandro@delgobbo.com)
+// This version of the software is still protected by the original MIT license 
+//(above) but if you have to include my name and email (here above) in the 
+// "credits" section of your project (a "thanks to" is enough) both
+// in the sources (if you have a public repo) and in the running software 
+// (usually in the "About this software" window/screen)
